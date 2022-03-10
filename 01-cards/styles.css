@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lobster', cursive, sans-serif;
+  overflow: hidden;
+  margin: 0;
+  background-color: #111;
+  height: 100vh;
+  display: flex;
+}
+
+.slider {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  padding: 24px;
+  background-color: #281e48;
+  align-self: center;
+}
+
+.slide {
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: #fff;
+  flex: 1;
+  opacity: .75;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all .5s ease-in-out;
+}
+
+.slide:hover {
+  opacity: 1;
+}
+
+.slide__title {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 400;
+  bottom: 24px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  transition: opacity .25s ease-in-out .4s;
+}
+
+.slide__active {
+  flex: 10;
+  opacity: 1;
+}
+
+.slide__active .slide__title {
+  opacity: 1;
+}

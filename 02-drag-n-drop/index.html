@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="styles.css"/>
+  <title>Drag & Drop | Проект 2</title>
+</head>
+<body>
+<main>
+  <div class="row">
+    <div class="col-header start">Начать</div>
+
+    <div class="col-header progress">В процессе</div>
+
+    <div class="col-header done">Готовы</div>
+  </div>
+
+  <div class="row">
+    <div class="placeholder" id="first">
+      <div class="item" draggable="true">Перетащи меня</div>
+    </div>
+
+    <div class="placeholder" id="second"></div>
+
+    <div class="placeholder" id="third"></div>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -13,17 +13,21 @@ body {
   text-align: center;
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #16D9E3;
-}
-
 .start {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  padding: 9px 20px;
+  border: 0;
+  background: #16D9E3;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color .2s ease-in-out, background .2s ease-in-out;
+}
+
+.start:hover {
+  color: #16D9E3;
+  background: #fff;
 }
 
 h1 {
@@ -66,10 +70,12 @@ h1 {
   font-family: inherit;
   padding: .5rem 1rem;
   font-size: 1.5rem;
+  border-radius: 8px;
+  transition: border-color .2s ease-in-out, color .2s ease-in-out;
 }
 
 .time-btn:hover {
-  border: 2px solid #16D9E3;
+  border-color: #16D9E3;
   color: #16D9E3;
 }
 

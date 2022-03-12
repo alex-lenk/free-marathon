@@ -8,24 +8,23 @@ for (let i = 0; i < squaresNumber; i++) {
   const square = document.createElement('div')
   square.classList.add('square')
 
-  square.addEventListener('mouseover', () => setColor(square))
-  square.addEventListener('mouseleave', () => removeColor(square))
+  square.addEventListener('mouseover', setColor)
+  square.addEventListener('mouseleave', removeColor)
 
   board.append(square)
 }
 
-function setColor(el) {
+function setColor(event) {
+  const el = event.target
   const color = getRandomColor()
-  el.style.backgroundColor = color
-  el.style.boxShadow = `0 0 20px ${color}`
+  el.style.cssText = `background-color: ${color}; box-shadow: 0 0 20px ${color}`
 }
 
-function removeColor(el) {
-  el.style.backgroundColor = '#1d1d1d '
-  el.style.boxShadow = `0 0 2px #000`
+function removeColor(event) {
+  const el = event.target
+  el.style.cssText = `background-color: #1d1d1d; box-shadow: 0 0 20px 0 0 2px #000`
 }
 
 function getRandomColor() {
-  const index = Math.floor(Math.random() * colors.length)
-  return colors[index]
+  return colors[Math.floor(Math.random() * colors.length)]
 }
